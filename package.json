@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack --mode production"
+    "start": "webpack serve --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -30,8 +30,11 @@
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/gsap": "^1.20.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
-    "style-loader": "^4.0.0"
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.14",
+    "webpack-bundle-analyzer": "^4.10.2"
   }
 }
