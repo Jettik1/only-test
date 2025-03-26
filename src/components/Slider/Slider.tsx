@@ -1,5 +1,4 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,8 +15,10 @@ import {
   SlideContent,
   TitleWrapper,
 } from "./Slider.styles";
-import prevIcon from "@/assets/SliderButtonIcon.svg";
-import nextIcon from "@/assets/SliderButtonIcon.svg";
+/* import prevIcon from "/assets/SliderButtonIcon.svg";
+import nextIcon from "/assets/SliderButtonIcon.svg"; */
+
+const BUTTON_ICON = "/assets/SliderButtonIcon.svg";
 
 interface SliderProps {
   segments: TimeSegment[];
@@ -55,7 +56,7 @@ const Slider: React.FC<SliderProps> = ({ segments, activeSegment }) => {
         onClick={() => swiperRef.current?.slidePrev()}
         disabled={isBeginning}
         flipped>
-        <img src={prevIcon} alt="Prev" />
+        <img src={BUTTON_ICON} alt="Prev" />
       </SliderNavigationButton>
 
       <SwiperContainer $isVisible={isVisible}>
@@ -97,7 +98,7 @@ const Slider: React.FC<SliderProps> = ({ segments, activeSegment }) => {
       <SliderNavigationButton
         onClick={() => swiperRef.current?.slideNext()}
         disabled={isEnd}>
-        <img src={nextIcon} alt="Next" />
+        <img src={BUTTON_ICON} alt="Next" />
       </SliderNavigationButton>
     </SliderWrapper>
   );

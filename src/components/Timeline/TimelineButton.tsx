@@ -1,9 +1,7 @@
 import React from "react";
-import {
-  StyledTimelineButtonIcon,
-  StyledTimelineButton,
-  IconWrapper,
-} from "@/components/Timeline/TimelineButton.styles";
+import { StyledTimelineButton } from "@/components/Timeline/TimelineButton.styles";
+
+const TIMELINE_BUTTON_ICON_SRC = "/assets/TimelineButtonIcon.svg";
 
 interface TimelineButtonProps {
   onClick: () => void;
@@ -16,15 +14,14 @@ export const TimelineButton: React.FC<TimelineButtonProps> = ({
   disabled,
   flipped,
 }) => {
+  console.log("Image path:", TIMELINE_BUTTON_ICON_SRC);
+
   return (
     <StyledTimelineButton
       onClick={!disabled ? onClick : undefined}
-      disabled={disabled}>
-      <IconWrapper $flipped={flipped}>
-        <svg viewBox="0 0 50 50">
-          <StyledTimelineButtonIcon />
-        </svg>
-      </IconWrapper>
+      disabled={disabled}
+      $flipped={flipped}>
+      <img src={TIMELINE_BUTTON_ICON_SRC} />
     </StyledTimelineButton>
   );
 };

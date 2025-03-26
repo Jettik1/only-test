@@ -1,13 +1,17 @@
 import { styled } from "styled-components";
-import TimelineButtonIcon from "@/assets/TimelineButtonIcon.svg?react";
+// import TimelineButtonIcon from "/assets/TimelineButtonIcon.svg?react";
 
-export const StyledTimelineButtonIcon = styled(TimelineButtonIcon)`
+export const StyledTimelineButtonIcon = styled.img`
   width: 50px;
   height: 50px;
   transition: transform 0.2s;
+  display: block; /* Убедись, что изображение не скрыто */
 `;
 
-export const StyledTimelineButton = styled.button<{ disabled?: boolean }>`
+export const StyledTimelineButton = styled.button<{
+  disabled?: boolean;
+  $flipped?: boolean;
+}>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +23,12 @@ export const StyledTimelineButton = styled.button<{ disabled?: boolean }>`
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
   transition: opacity 0.2s;
 
+  img {
+    width: 50px;
+    height: 50px;
+    transform: ${(props) => (props.$flipped ? "scaleX(-1)" : "none")};
+  }
+
   &:hover {
     opacity: ${(props) => (props.disabled ? 0.5 : 0.8)};
   }
@@ -29,7 +39,7 @@ export const StyledTimelineButton = styled.button<{ disabled?: boolean }>`
   }
 `;
 
-export const IconWrapper = styled.div<{ $flipped?: boolean }>`
+/* export const IconWrapper = styled.div<{ $flipped?: boolean }>`
   width: 50px;
   height: 50px;
   display: flex;
@@ -44,3 +54,4 @@ export const IconWrapper = styled.div<{ $flipped?: boolean }>`
     height: 100%;
   }
 `;
+ */
