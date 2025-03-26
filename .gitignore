@@ -1,0 +1,16 @@
+# node_modules
+node_modules/
+
+# Логи
+*.log
+
+# Установочные файлы
+package-lock.json
+yarn.lock
+
+# Файлы редакторов
+.vscode/
+.idea/
+
+# Прочее
+.env
