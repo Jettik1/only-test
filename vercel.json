@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "static": {
-    "directory": "dist"
-  },
+  "builds": [],
   "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
 }
