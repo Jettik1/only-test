@@ -16,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
   overflow-x: hidden;
   max-width: 100vw;
-    background-color:rgb(218, 231, 238);
+    background-color:rgb(230, 241, 247);
   }
 
   svg {

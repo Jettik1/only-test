@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import { TimeSegment } from "@/lib/types";
 import {
   MobileTimelineContainer,
@@ -11,7 +11,7 @@ interface MobileTimelinePointsProps {
   onChangeSegment: (index: number) => void;
 }
 
-const MobileTimelinePoints: React.FC<MobileTimelinePointsProps> = ({
+const MobileTimelinePoints: FC<MobileTimelinePointsProps> = ({
   segments,
   activeSegment,
   onChangeSegment,

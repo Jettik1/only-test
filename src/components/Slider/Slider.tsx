@@ -1,7 +1,7 @@
 import { Swiper } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+/* import "swiper/css/navigation";
+import "swiper/css/pagination"; */
 import { TimeSegment } from "@/lib/types";
 import { useEffect, useRef, useState } from "react";
 import SwiperCore from "swiper";
